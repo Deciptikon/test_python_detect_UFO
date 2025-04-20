@@ -1,19 +1,17 @@
 import cv2
 import numpy as np
 
-
-
 def dist(point_1, point_2):
     d2 = (point_1[0] - point_2[0]) ** 2 + (point_1[1] - point_2[1]) ** 2
     return d2 ** 0.5
 
 def update_trajectory(trajectory, contours):
     if len(contours) == 0:
-        print("len(contours) == 0")
+        #print("len(contours) == 0")
         return trajectory
 
     if len(trajectory) == 0:
-        print("len(trajectory) == 0")
+        #print("len(trajectory) == 0")
         x, y, w, h = cv2.boundingRect(contours[0])
         trajectory.append((x + w/2, y + h/2))
         return trajectory
