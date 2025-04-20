@@ -1,0 +1,12 @@
+# dataset.yaml - конфиг для YOLOv8 (все файлы в одной папке)
+path: ./dataset
+train: .
+val: .
+
+# Классы
+names:
+  0: drone
+
+# Доп. параметры
+augment: True
+nc: 1
